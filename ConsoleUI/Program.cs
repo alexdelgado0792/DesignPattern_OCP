@@ -13,7 +13,7 @@ namespace ConsoleUI
                 {
                     new PersonModel { FirstName="Joe", LastName="Doe" },
                     new PersonModel { FirstName="Mary", LastName="Cool", TypeOfEmployee = EmployeeType.Manager},
-                    new PersonModel { FirstName="Davi", LastName="Steph" }
+                    new PersonModel { FirstName="Davi", LastName="Steph", TypeOfEmployee = EmployeeType.Executive}
                 };
 
                 var employees = new List<EmployeeModel>();
