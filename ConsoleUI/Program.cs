@@ -2,6 +2,7 @@
 using OcpLibrary.Models;
 using System;
 using System.Collections.Generic;
+using OcpLibrary.Interfaces;
 
 namespace ConsoleUI
 {
@@ -9,7 +10,7 @@ namespace ConsoleUI
     {
             public static void Main(string[] args)
             {
-                var applicants = new List<PersonModel>()
+                IList<IApplicantModel> applicants = new List<IApplicantModel>()
                 {
                     new PersonModel { FirstName="Joe", LastName="Doe" },
                     new PersonModel { FirstName="Mary", LastName="Cool"},
