@@ -1,11 +1,11 @@
-using System;
+using OcpLibrary.Interfaces;
 using OcpLibrary.Models;
 
 namespace OcpLibrary
 {
-    public class Accounts
+    public class Accounts : IAccounts
     {
-        public EmployeeModel Create(PersonModel person)
+        public EmployeeModel Create(IApplicantModel person)
         {
             EmployeeModel output = new EmployeeModel();
 
@@ -13,19 +13,7 @@ namespace OcpLibrary
             output.LastName = person.LastName;
             output.EmailAddress = $"{ person.FirstName.Substring(0, 1) }{ person.LastName }@domain.com";
 
-            switch (person.TypeOfEmployee)
-            {
-                case EmployeeType.Staff:
-                    break;
-                case EmployeeType.Manager:
-                    output.IsManager = true;
-                    break;
-                case EmployeeType.Executive:
-                    output.IsManager = true;
-                    output.IsExecutive = true;
-                    break;
-            }
-
+            
             return output;
         }
 
