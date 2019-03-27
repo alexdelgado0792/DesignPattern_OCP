@@ -13,8 +13,8 @@ namespace ConsoleUI
                 IList<IApplicantModel> applicants = new List<IApplicantModel>()
                 {
                     new PersonModel { FirstName="Joe", LastName="Doe" },
-                    new PersonModel { FirstName="Mary", LastName="Cool"},
-                    new PersonModel { FirstName="Davi", LastName="Steph"}
+                    new ManagerModel { FirstName="Mary", LastName="Cool"},
+                    new ExecutiveModel() { FirstName="Davi", LastName="Steph"}
                 };
 
                 var employees = new List<EmployeeModel>();
